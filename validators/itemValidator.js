@@ -26,23 +26,23 @@ itemsValidator.createItem =  checkSchema({
         in: "body",
         isString: { errorMessage: "Campo debe ser un string valido" },
         isLength: {
-          options: { min: 3, max: 20 },
-          errorMessage: "El nombre debe tener entre 3 y 20 caracteres",
+          options: { min: 5, max: 20 },
+          errorMessage: "El nombre debe tener entre 5 y 20 caracteres",
         },
     },
     description: {
         in: "body",
         isString: { errorMessage: "Campo debe ser un string valido" },
         isLength: {
-          options: { min: 3, max: 100 },
-          errorMessage: "La descripción debe tener entre 3 y 100 caracteres",
+          options: { min: 5, max: 100 },
+          errorMessage: "La descripción debe tener entre 5 y 100 caracteres",
         },
     }
 })
 
 // Validacion para actualizar un elemento
 itemsValidator.updateItem =  checkSchema({
-  _id: {
+  id: {
     in: "params",
     isString: { errorMessage: "Campo debe ser un string valido" },
     custom: {
@@ -60,16 +60,16 @@ itemsValidator.updateItem =  checkSchema({
     in: "body",
     isString: { errorMessage: "Campo debe ser un string valido" },
     isLength: {
-      options: { min: 3, max: 20 },
-      errorMessage: "El nombre debe tener entre 3 y 20 caracteres",
+      options: { min: 5, max: 20 },
+      errorMessage: "El nombre debe tener entre 5 y 20 caracteres",
     },
   },
   description: {
       in: "body",
       isString: { errorMessage: "Campo debe ser un string valido" },
       isLength: {
-        options: { min: 3, max: 100 },
-        errorMessage: "La descripción debe tener entre 3 y 100 caracteres",
+        options: { min: 5, max: 100 },
+        errorMessage: "La descripción debe tener entre 5 y 100 caracteres",
       },
   }
 })
