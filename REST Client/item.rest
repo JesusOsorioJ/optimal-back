@@ -1,0 +1,26 @@
+### Listar todos los elementos
+GET http://localhost:3000/items
+
+### Listar un elemento por ID
+GET http://localhost:3000/items/6711bce96c8055dfe7030dc1
+
+### Crear un nuevo elemento
+POST http://localhost:3000/items
+Content-Type: application/json
+
+{
+  "name": "Nuevo Elemento",
+  "description": "Descripción del nuevo elemento"
+}
+
+### Actualizar un elemento por ID
+PUT http://localhost:3000/items/6711bce96c8055dfe7030dc1
+Content-Type: application/json
+
+{
+  "name": "Elemento Actualizado",
+  "description": "Descripción actualizada"
+}
+
+### Eliminar un elemento por ID
+DELETE http://localhost:3000/items/6711bc9d6c8055dfe7030dbd
